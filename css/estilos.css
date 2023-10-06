@@ -1,0 +1,585 @@
+/* Etapa 1 CSS */
+@import url('https://fonts.googleapis.com/css2? family= Castoro & family= Langosta & display=swap');
+*
+ {
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+body {
+	font-family: 'Mukta', sans-serif;;
+	background: linear-gradient(0deg, rgba(216,233,255,1) 0%, rgba(47,110,230,1) 64%, rgba(5,0,111,1) 100%);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Mukta', sans-serif;
+	letter-spacing: 1.5px;
+}
+
+.section__titulo {
+	text-align: center;
+	font-size: 40px;
+	color: #c9cfff;
+}
+
+.contenedor {
+	margin: auto;
+	width: 80%;
+}
+
+/* Estilos del Header*/
+.header {
+	height: 60px;
+}
+.header .contenedor {
+	display: flex;
+	justify-content: space-between;
+}
+.logo, icon-menu {
+	margin: 0px;
+	color: #ffffff;
+	
+}
+
+icon-menu {
+	display: block;
+	width: 40px;
+    height: 40px;
+	font-size: 30px;
+	background: #374bff;
+	color: #7ddaff;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 5px;
+	margin-left: auto;
+	cursor: pointer;
+}
+/*Estilos del menu*/
+.nav {
+	position: absolute;
+	top: 60px;
+	left: -100%;
+	width: 100%;
+	transition: all 0.4s;
+}
+
+/* Etapa 2 CSS */
+
+.menu {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+.menu__link {
+	display: block;
+	padding: 15px;
+	background: #374bff;
+	text-decoration: none;
+	color: #fff;
+}
+.menu__link:hover, .select {
+	background: white;
+	color: #82d7ff;
+	
+}
+.mostrar {
+	left: 0;
+	
+}
+ 
+
+
+/*Estilos de banner*/
+
+.banner {
+	margin-top: -60px;
+	position: relative;
+	z-index: -1000;
+	margin-bottom: 20px;
+}
+
+.banner .contenedor {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	
+}
+
+.banner__txt {
+	display: none;
+}
+
+
+/*Estilos de info*/
+.info__columna {
+	background: #000958;
+	color: #fff;
+	padding: 15px;
+	margin-bottom: 30px;
+}
+
+/*Estilos de cursos*/
+.cursos__columna {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.cursos__description {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+	width: 60%;
+	height: 100%;
+	padding: 5px;
+}
+
+.cursos__titulo {
+	font-size: 25px;
+	margin: 5px 0;
+}
+
+.cursos__img {
+	width: 100%;
+}
+
+
+/*Estilos de footer*/
+.footer {
+	background: #020c69;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+
+.footer .social [class^="icon-"] {
+	display: inline-block;
+	color: #020c69;
+	text-decoration: none;
+	font-size: 30px;
+	padding: 10px;
+	background: white;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	line-height: 40px;
+}
+
+/* Etapa 3 CSS */
+
+/*Agregado para texto en home-office page */
+.homeoffice {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.in-flex {
+	flex: 1;
+	min-width: 250px;
+}
+
+.in-flex:first-child {
+	flex: 2;
+	padding: 25px;
+	margin: 20px;
+	margin-bottom: 0px;
+}
+
+.in-flex div {
+	padding: 25px;
+	background-color: #fff;
+	margin: 20px;
+}
+
+
+
+/* Estilos de responsive */
+@media(min-width:480px){
+	.logo {
+		font-size: 40px;
+	}
+	.banner__titulo {
+		font-size: 30px;
+		margin: 5px 0;
+	}
+	.banner__txt {
+		display: block;
+		font-size: 18px;
+		margin: 7px 0;
+	}
+	.info, .cursos {
+		display: flex;
+		justify-content: space-between;
+		margin-top: -90px;
+	}
+	.info__columna {
+		width: 31%;
+		
+	}
+	.info__titulo {
+		font-size: 30px;
+		margin: 5px 0;
+	}
+	.section__titulo {
+		width: 100%;
+	}
+	.cursos {
+		flex-wrap: wrap;
+		margin-top: 0;
+	}
+	.cursos__columna {
+		width: 48%;
+	}
+	.footer .social [class^="icon-"] {
+		margin: 0 10px;
+	}
+}
+	@media(min-width:768px){
+		.banner__titulo {
+			font-size: 50px
+		}
+		.cursos__titulo{
+			font-size: 40px;
+		}
+	}
+
+@media(min-width:1024px){
+	.contenedor {
+		width: 1000;
+	}
+	.section__titulo {
+		font-size: 50px;
+		margin: 30px 0;
+	}
+	.nav {
+		position: static;
+		width: auto;
+	}
+	.menu {
+		display: flex;
+	}
+	.icon-menu {
+		display: none;
+	}
+	.menu__link {
+		background: none;
+		font-size: 20px;
+	}
+	.select {
+		background: #374bff;
+		color: white;
+	}
+		.banner__titulo {
+			font-size: 70px
+		}
+	.banner__txt {
+		font-size: 25px;
+	}
+	.info {
+		margin-top: -120px;
+	}
+	
+	.info__columna {
+		padding: 30px;
+	}
+	
+	.info__titulo{
+		font-size: 40px;
+		text-align: center;
+	}
+	.cursos__description {
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
+		.cursos__titulo{
+			font-size: 50px;
+		}
+		
+	.cursos__txt {
+		font-size: 20px;
+	}
+
+@media(min-width:1280px){
+	.contenedor {
+		width: 1200;
+	}
+	.banner .contenedor {
+		top: 40%;
+	}
+	.info {
+		margin-top: -220px;
+	}
+	.logo {
+		font-size: 60px;
+	}
+}}
+
+ /* CSS DE LIBROS*/
+ .gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+ 
+  .card {
+	position: relative;
+	
+	margin-bottom: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	transition: transform 0.3s ease;
+  }
+  
+  .card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  
+  .overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	padding: 10px;
+	transform: translateY(100%);
+	transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+	transform: scale(1.05);
+  }
+  
+  .card:hover .overlay {
+	transform: translateY(0);
+  }
+  
+ /*Formulario CSS*/
+ .Form {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  .Form h1 {
+	text-align: right;
+	color: #ecddff;
+  }
+  
+  form {
+	display: grid;
+	grid-gap: 10px;
+	width: 450px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #a8ccfa 50%, #e9c7ff 50%);
+}
+  
+  
+  label {
+	font-weight: bold;
+  }
+
+  
+
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #130047;
+	border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+	background-color: #370042;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+	background-color: #370042;
+  }
+  /*CSS EPISODIOS*/
+  #agrupar {
+    width: 1300px;
+    margin: 20px auto;
+    text-align: center;
+}
+  #columna2 {
+    float: left;
+    width: 430px;
+    margin: 20px 0px;
+    padding: 20px;
+    background: rgb(49, 42, 143);
+    color: white;
+}
+  .contenedor-video {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.video{
+    flex-basis: calc(33.3%-10px);
+    border: 1px solid white;
+    background-color: rgb(181, 205, 255);
+}
+
+.contenido-video {
+    padding: 20px;
+
+}
+
+.contenido-video h3, .contenido-video p {
+    margin: 0;
+}
+
+#pie{
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*EFECTO INICIO*/
+
+
+.hero {
+	
+	min-height: 100vh;
+	min-height: 30rem;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	
+	&__content {
+		position: relative;
+		align-self: center;
+		padding: 3rem 0;
+	}
+}
+
+.snow {
+	position: absolute;
+	min-width: 100vw;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.snow .svg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#snow-top-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 22.5s infinite linear;
+}
+
+#snow-bottom-layer {
+	will-change: transform;
+	transform: translateY(-768px);
+	animation: fall 45s infinite linear;
+}
+
+@keyframes fall {
+	
+	100% {
+		transform: translateY(0);
+	}
+	
+}
+/*SERIES*/
+
+h3 {
+	text-decoration: none;
+	color: white;
+}
+
+.box-wrap{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin:10%;
+  }
+ 
+  .box{
+	padding:30px;
+	margin:2%;
+	background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(255,0,0,1) 100%);
+	width:30%;
+	border:1px solid #810e0e;
+	box-shadow:0 2px 3px 0px rgba(0,0,0,0.25);
+	border-radius:3px;
+	transition:.2s all; 
+  }
+
+
+  .box-wrap:hover .box{
+	filter:blur(3px);
+	opacity:.5;
+	transform: scale(.98);
+	box-shadow:none;
+  }
+  .box-wrap:hover .box:hover{
+	transform:scale(1);
+	filter:blur(0px);
+	opacity:1;
+	box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+  }
+
+/*CSS DATOS*/
+.gallery2 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .photo {
+	width: 200px;
+	margin: 10px;
+	text-align: center;
+  }
+  
+  .photo img {
+	width: 100%;
+  }
+  
+  .photo:hover {
+	transform: scale(1.1);
+  }
+  .caption {
+	margin-top: 5px;
+  }
+  
